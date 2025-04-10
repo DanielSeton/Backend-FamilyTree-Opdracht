@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
@@ -25,6 +26,46 @@ public class Person {
         this.lastName = lastName;
         this.age = age;
         this.sex = sex;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public List<Person> getSibling() {
@@ -72,7 +113,19 @@ public class Person {
         setMother(mother);
     }
 
-    public void addChild(){
-
+    public void addChild(Person child){
+        children.add(child);
     }
+
+    public void addSibling(Person sibling){
+        List<Person> siblings = new ArrayList<>();
+        siblings.add(sibling);
+    }
+
+    public void addPet(Person person, Pet pet){
+        List<Pet> pets = new ArrayList<>();
+        pets.add(pet);
+        person.setPet(pets);
+    }
+
 }
